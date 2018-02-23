@@ -1,0 +1,33 @@
+body {
+  background-color: #419FF4
+}
+main {
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+
+.left-content {
+  height:100%;
+}
+
+.mid-content {
+  height:100%;
+}
+
+.right-content {
+  height:100%;
+}
+
+.mid-float {
+  width: 100%
+}
+
+.bottom-left {
+    margin: 0px;
+    top: auto;
+    left: 0px;
+    bottom: 0px;
+    right: auto;
+    position: fixed;
+};
