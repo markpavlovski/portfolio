@@ -26,8 +26,10 @@ main {
 .bottom-left {
     margin-bottom: -10px;
     top: auto;
-    left: 0px;
+    left: 40px;
     bottom: 0px;
     right: auto;
     position: fixed;
+    z-index: -1;
+
 };
