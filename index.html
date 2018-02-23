@@ -10,7 +10,15 @@
     .grid-container {
       display: grid;
       grid-gap: 10px;
+      grid-template-areas:
+            "a b c"
+            "d d e"
+            ". f e"
+            ". f g";
       /* background-color: #2196F3; */
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+
       padding: 10px;
     }
     .grid-item {
@@ -20,16 +28,25 @@
       font-size: 30px;
     }
     .item1 {
-      grid-column: 1 / span 2;
-      grid-row: 1;
+      grid-area: a;
     }
     .item2 {
-      grid-column: 3;
-      grid-row: 1 / span 2;
+    grid-area: b;
+    }
+    .item3 {
+      grid-area: c;
+    }
+    .item4 {
+      grid-area: d;
     }
     .item5 {
-      grid-column: 1 / span 3;
-      grid-row: 3;
+      grid-area: e;
+    }
+    .item6 {
+      grid-area: f;
+    }
+    .item7 {
+      grid-area: g;
     }
   </style>
 </head>
@@ -53,11 +70,13 @@
 
 
           <div class="grid-container">
-            <div class="grid-item item1">msaghkjasgfkajdshgfkj</div>
+            <div class="grid-item item1">1</div>
             <div class="grid-item item2">2</div>
             <div class="grid-item item3">3</div>
-            <div class="grid-item item4">4</div>
-            <div class="grid-item item5">5</div>
+            <div class="grid-item item4">3</div>
+            <div class="grid-item item5">3</div>
+            <div class="grid-item item6">3</div>
+            <div class="grid-item item7">3</div>
           </div>
 
           xxxxxljashgdfkjahSGDhagsdkug
