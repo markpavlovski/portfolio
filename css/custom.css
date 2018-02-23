@@ -24,7 +24,7 @@ main {
 }
 
 .bottom-left {
-    margin: 0px;
+    margin-bottom: -10px;
     top: auto;
     left: 0px;
     bottom: 0px;
