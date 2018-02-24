@@ -37,7 +37,7 @@ main {
     bottom: 0px;
     right: auto;
     position: fixed;
-    z-index: -1;
+    z-index: 1;
 
 };
 
@@ -70,6 +70,17 @@ main {
 
 .item1 {
   grid-area: a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.item1-image {
+  /* justify-self: center;
+  align-self: center; */
+  height: 100px;
+  opacity: 0.8;
 }
 
 .item2 {
