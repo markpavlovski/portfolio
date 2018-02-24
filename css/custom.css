@@ -30,7 +30,6 @@ main {
 .mid-float {
   width: 100%
 }
-
 .bottom-left {
     margin-bottom: -10px;
     top: auto;
@@ -48,3 +47,51 @@ main {
 
 
 /* Middle Grid */
+
+
+.grid-container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas: "a b c" "d d e" ". f e" ". f g";
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 60px;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(4, 130px);
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
+  text-align: center;
+  font-size: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+.item1 {
+  grid-area: a;
+}
+
+.item2 {
+  grid-area: b;
+}
+
+.item3 {
+  grid-area: c;
+}
+
+.item4 {
+  grid-area: d;
+}
+
+.item5 {
+  grid-area: e;
+}
+
+.item6 {
+  grid-area: f;
+}
+
+.item7 {
+  grid-area: g;
+}
