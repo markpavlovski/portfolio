@@ -31,9 +31,9 @@ main {
   width: 100%
 }
 .bottom-left {
-    margin-bottom: -10px;
+    margin-bottom: -50px;
     top: auto;
-    left: 40px;
+    left: 100px;
     bottom: 0px;
     right: auto;
     position: fixed;
@@ -45,6 +45,52 @@ main {
   opacity: .5;
 }
 
+
+.btn-floating.bottom-left-button {
+  width: 350px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.0);
+  background-image: url('images/github-logo.png');
+  border-radius: 0;
+  z-index: 10;
+}
+
+
+.fixed-action-btn {
+  margin-left: 0px;
+}
+.fixed-action-btn .btn-floating img{
+  margin-left: -200px;
+}
+.fixed-action-btn ul {
+  margin-bottom: 100px;
+  margin-left: -85px;
+}
+
+.btn-floating.yellow {
+  width: 15px;
+  height: 15px;
+}
+
+.fixed-action-btn ul .link1 {
+  transition-delay: 2s;
+  transition-timing-function: ease-in;
+  color: #fff;
+  transition: color 0.5s ease;
+}
+
+
+.btn-floating.yellow.text {
+  line-height: 2em;
+  height: 2em;
+  width: 100px;
+  border-radius: 0px;
+  transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px);
+  font-size: 1em;
+  margin-left: 10px !important;
+  background-color: rgba(255, 255, 255, 0.0) !important;
+  text-align: left;
+}
 
 /* Middle Grid */
 
@@ -77,13 +123,14 @@ main {
 
 .grid-item:hover {
   /* background-color: rgba(230, 113, 107, .8); */
-  -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s ease;
+
 }
 
 .item1 {
   grid-area: a;
-  background-color: #e6716b  ;
+  background-color: #e6716b;
 
 }
 
