@@ -64,20 +64,14 @@ main {
   /* margin-left: -200px; */
 }
 .fixed-action-btn ul {
-  margin-bottom: 110px;
-  /* margin-left: -85px; */
+  margin-bottom: 100px;
+  margin-left: 2px;
+  z-index: 100;
 }
 
 .btn-floating.yellow {
   width: 15px;
   height: 15px;
-}
-
-.fixed-action-btn ul .link1 {
-  transition-delay: 2s;
-  transition-timing-function: ease-in;
-  color: #fff;
-  transition: color 1s ease;
 }
 
 
@@ -106,10 +100,9 @@ main {
 }
 
 .btn-floating.yellow.text.title {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 1em;
   font-family: 'Unica One', cursive;
-
 }
 
 /* Middle Grid */
