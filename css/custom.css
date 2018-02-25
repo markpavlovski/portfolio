@@ -124,7 +124,7 @@ main {
   display: grid;
   grid-gap: 1em;
   grid-template-areas: "a b c" "d d e" ". f e" ". f g";
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.02);
   padding: 60px;
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(4, 130px);
@@ -152,7 +152,7 @@ main {
 
 .item1 {
   grid-area: a;
-  background-color: #e6716b;
+  /* background-color: #e6716b; */
 }
 
 .grid-item img {
@@ -176,7 +176,7 @@ main {
 
 .item5 {
   grid-area: e;
-  background-color: #e6716b
+  /* background-color: #e6716b */
 }
 
 .item6 {
