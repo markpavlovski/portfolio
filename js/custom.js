@@ -1,5 +1,7 @@
 $(document).ready(() => {
   $(".content-item-y").click(goMain)
+  $(".name").click(goMain)
+  $(".title").click(goMain)
   $(".email").click(goContent)
   $(".main-grid-item").click(goContent)
   setTimeout(() => $('.fixed-action-btn').openFAB(), 750)
