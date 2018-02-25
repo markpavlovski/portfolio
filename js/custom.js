@@ -9,12 +9,29 @@ $(document).ready(() => {
 
 
 function goMain() {
-  $( ".content-grid-container" ).css( "display", "none" )
-  $( ".main-grid-container" ).css( "display", "grid" )
+  $( ".content-grid-container" )
+    .css( "opacity", "1" )
+    .animate({opacity: "0"}, 300)
+
+  setTimeout(() => {
+    $( ".content-grid-container" ).css( "display", "none" )
+    $( ".main-grid-container" )
+      .css( "opacity", "0" )
+      .css( "display", "grid" )
+      .animate({opacity: "1"}, 300)
+  }, 500)
 }
 
 
 function goContent() {
-  $( ".main-grid-container" ).css( "display", "none" )
-  $( ".content-grid-container" ).css( "display", "grid" )
+  $( ".main-grid-container" )
+    .animate({opacity: "0"}, 300)
+
+  setTimeout(() => {
+    $( ".main-grid-container" ).css( "display", "none" )
+    $( ".content-grid-container" )
+      .css( "opacity", "0" )
+      .css( "display", "grid" )
+      .animate({opacity: "1"}, 300)
+  }, 500)
 }

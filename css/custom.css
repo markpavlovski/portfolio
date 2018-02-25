@@ -136,6 +136,7 @@ main {
   padding: 60px;
   grid-template-columns: repeat(3, 202px);
   grid-template-rows: repeat(4, 126px);
+  transition: opacity 2s ease;
 }
 
 .main-grid-item {
@@ -220,7 +221,7 @@ main {
   padding: 60px;
   grid-template-columns: repeat(12, 53px);
   grid-template-rows: repeat(9, 61px);
-  z-index: 1
+  transition: opacity 2s ease;
 }
 
 .content-grid-item {
