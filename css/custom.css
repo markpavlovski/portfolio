@@ -108,6 +108,9 @@ main {
   font-family: 'Unica One', cursive;
 }
 
+.email {
+}
+
 /* Middle Grid Main */
 
 .waves-effect.waves-light-custom .waves-ripple {
@@ -122,12 +125,17 @@ main {
 
 .main-grid-container {
   display: grid;
-  grid-gap: 1em;
-  grid-template-areas: "a b c" "d d e" ". f e" ". f g";
-  background-color: rgba(255, 255, 255, 0.02);
+  grid-gap: 15px;
+  grid-template-areas:
+    "a b c"
+    "d d e"
+    ". f e"
+    ". f g"
+  ;
+  background-color: rgba(255, 255, 255, 0.03);
   padding: 60px;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(4, 130px);
+  grid-template-columns: repeat(3, 202px);
+  grid-template-rows: repeat(4, 126px);
 }
 
 .main-grid-item {
@@ -184,5 +192,104 @@ main {
 }
 
 .main-item7 {
+  grid-area: g;
+}
+
+
+/* CONTENT GRID */
+
+
+.content-grid-container {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+    "x x x x x x x x x x y y"
+    "x x x x x x x x x x y y"
+    "x x x x x x x x x x a a"
+    "x x x x x x x x x x b b"
+    "x x x x x x x x x x c c"
+    "x x x x x x x x x x d d"
+    "x x x x x x x x x x e e"
+    "x x x x x x x x x x f f"
+    "x x x x x x x x x x g g"
+
+  ;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 60px;
+  grid-template-columns: repeat(12, 53px);
+  grid-template-rows: repeat(9, 61px);
+  z-index: 1
+}
+
+.content-grid-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
+  text-align: center;
+  font-size: 0px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-grid-item:hover {
+  /* background-color: rgba(230, 113, 107, .8); */
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s ease;
+  cursor: pointer;
+
+}
+
+.content-grid-item img {
+  /* justify-self: center;
+  align-self: center; */
+  height: 40px;
+  opacity: 0.8;
+}
+
+
+.content-item-x {
+  grid-area: x;
+}
+
+
+.content-item-y {
+  grid-area: y;
+}
+
+
+.content-item-z {
+  grid-area: z;
+}
+
+.content-item1 {
+  grid-area: a;
+  /* background-color: #e6716b; */
+}
+
+.content-item2 {
+  grid-area: b;
+}
+
+.content-item3 {
+  grid-area: c;
+}
+
+.content-item4 {
+  grid-area: d;
+}
+
+.content-item5 {
+  grid-area: e;
+  /* background-color: #e6716b */
+}
+
+.content-item6 {
+  grid-area: f;
+}
+
+.content-item7 {
   grid-area: g;
 }
