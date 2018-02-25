@@ -47,12 +47,13 @@ main {
 
 
 .btn-floating.bottom-left-button {
-  width: 350px;
+  width: 200px;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.0);
-  background-image: url('images/github-logo.png');
+  background-image: url('images/octocat.png');
   border-radius: 0;
   z-index: 10;
+
 }
 
 
@@ -60,11 +61,11 @@ main {
   margin-left: 0px;
 }
 .fixed-action-btn .btn-floating img{
-  margin-left: -200px;
+  /* margin-left: -200px; */
 }
 .fixed-action-btn ul {
-  margin-bottom: 100px;
-  margin-left: -85px;
+  margin-bottom: 110px;
+  /* margin-left: -85px; */
 }
 
 .btn-floating.yellow {
@@ -76,20 +77,39 @@ main {
   transition-delay: 2s;
   transition-timing-function: ease-in;
   color: #fff;
-  transition: color 0.5s ease;
+  transition: color 1s ease;
 }
 
 
 .btn-floating.yellow.text {
   line-height: 2em;
   height: 2em;
-  width: 100px;
+  width: 200px;
   border-radius: 0px;
   transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px);
-  font-size: 1em;
-  margin-left: 10px !important;
+  margin-left: 0px !important;
   background-color: rgba(255, 255, 255, 0.0) !important;
-  text-align: left;
+  text-align: center;
+}
+
+.btn-floating.yellow.text.image {
+  height: 40px
+}
+.btn-floating.yellow.text.image img {
+  height: 40px
+}
+
+.btn-floating.yellow.text.name {
+  margin-bottom: -30px;
+  font-size: 1.25em;
+  font-family: 'Comfortaa', cursive;
+}
+
+.btn-floating.yellow.text.title {
+  margin-bottom: 30px;
+  font-size: 1em;
+  font-family: 'Unica One', cursive;
+
 }
 
 /* Middle Grid */
