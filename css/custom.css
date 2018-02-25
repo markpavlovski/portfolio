@@ -120,7 +120,7 @@ main {
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.0), 0 1px 5px 0 rgba(0, 0, 0, 0.0), 0 3px 1px -2px rgba(0, 0, 0, 0.0);
 }
 
-.grid-container {
+.main-grid-container {
   display: grid;
   grid-gap: 1em;
   grid-template-areas: "a b c" "d d e" ". f e" ". f g";
@@ -130,7 +130,7 @@ main {
   grid-template-rows: repeat(4, 130px);
 }
 
-.grid-item {
+.main-grid-item {
   background-color: rgba(255, 255, 255, 0.5);
   /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
   text-align: center;
@@ -142,7 +142,7 @@ main {
   justify-content: center;
 }
 
-.grid-item:hover {
+.main-grid-item:hover {
   /* background-color: rgba(230, 113, 107, .8); */
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.5s ease;
@@ -150,39 +150,39 @@ main {
 
 }
 
-.item1 {
+.main-item1 {
   grid-area: a;
   /* background-color: #e6716b; */
 }
 
-.grid-item img {
+.main-grid-item img {
   /* justify-self: center;
   align-self: center; */
   height: 100px;
   opacity: 0.8;
 }
 
-.item2 {
+.main-item2 {
   grid-area: b;
 }
 
-.item3 {
+.main-item3 {
   grid-area: c;
 }
 
-.item4 {
+.main-item4 {
   grid-area: d;
 }
 
-.item5 {
+.main-item5 {
   grid-area: e;
   /* background-color: #e6716b */
 }
 
-.item6 {
+.main-item6 {
   grid-area: f;
 }
 
-.item7 {
+.main-item7 {
   grid-area: g;
 }
