@@ -229,7 +229,7 @@ main {
   /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
   text-align: center;
   font-size: 15px;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -237,7 +237,7 @@ main {
   font-family: 'Unica One', cursive;
 }
 
-.content-grid-item:hover {
+.content-grid-item:not(.content-item-x):hover {
   /* background-color: rgba(230, 113, 107, .8); */
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.5s ease;
@@ -254,7 +254,15 @@ main {
 
 
 .content-item-x {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
   grid-area: x;
+  align-content: flex-start;
+}
+
+.content-item-x div:not(.empty-project):hover {
+  cursor: pointer;
 }
 
 
@@ -295,4 +303,24 @@ main {
 
 .content-item7 {
   grid-area: g;
+}
+
+.content-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  width: 140px;
+  height: 112px;
+  background-color: rgba(255,255,255,0.15);
+}
+
+.empty-project {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.title-card {
+  background-color: rgba(255,255,0,0.0);
+  font-size: 28px;
+  color: rgba(0,0,0,0.2);
 }
