@@ -2,6 +2,7 @@ $(document).ready(() => {
   $(".content-item-y").click(goMain);
   $(".email").click(goContent);
   $(".main-grid-item").click(goContent);
+  $('.fixed-action-btn').openFAB();
 });
 
 
