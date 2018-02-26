@@ -136,7 +136,7 @@ main {
   padding: 60px;
   grid-template-columns: repeat(3, 202px);
   grid-template-rows: repeat(4, 126px);
-  transition: opacity 2s ease;
+  transition: opacity 0.5s ease;
 }
 
 .main-grid-item {
@@ -221,7 +221,7 @@ main {
   padding: 60px;
   grid-template-columns: repeat(12, 53px);
   grid-template-rows: repeat(9, 61px);
-  transition: opacity 2s ease;
+  transition: opacity 0.5s ease;
 }
 
 .content-grid-item {
@@ -312,6 +312,7 @@ main {
   margin: 8px;
   width: 140px;
   height: 112px;
+  color: rgba(0,0,0,0.8);
   background-color: rgba(255,255,255,0.15);
 }
 
@@ -323,4 +324,7 @@ main {
   background-color: rgba(255,255,0,0.0);
   font-size: 28px;
   color: rgba(0,0,0,0.2);
+}
+.title-card:hover{
+  cursor: default !important;
 }
