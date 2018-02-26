@@ -5,7 +5,42 @@ $(document).ready(() => {
   $(".email").click(goContent)
   $(".main-grid-item").click(goContent)
   setTimeout(() => $('.fixed-action-btn').openFAB(), 750)
-});
+  $('.content-card').hide()
+  $('.back-end').show()
+
+  $(".front-end-link").click(() => {
+    $('.content-card').hide()
+    $('.front-end').show()
+  })
+  $(".back-end-link").click(() => {
+    $('.content-card').hide()
+    $('.front-end').show()
+  })
+  $(".back-end-link").click(() => {
+    $('.content-card').hide()
+    $('.back-end').show()
+  })
+  $(".math-link").click(() => {
+    $('.content-card').hide()
+    $('.math').show()
+  })
+  $(".design-link").click(() => {
+    $('.content-card').hide()
+    $('.design').show()
+  })
+  $(".visuals-link").click(() => {
+    $('.content-card').hide()
+    $('.visuals').show()
+  })
+  $(".games-link").click(() => {
+    $('.content-card').hide()
+    $('.games').show()
+  })
+  $(".other-link").click(() => {
+    $('.content-card').hide()
+    $('.other').show()
+  })
+})
 
 
 function goMain() {
