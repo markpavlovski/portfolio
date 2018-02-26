@@ -31,7 +31,7 @@ main {
   width: 100%
 }
 .bottom-left {
-    margin-bottom: -50px;
+    margin-bottom: -40px;
     top: auto;
     left: 100px;
     bottom: 0px;
@@ -93,7 +93,8 @@ main {
   margin-left: +20px;
 }
 .btn-floating.yellow.text.image img {
-  height: 40px
+  height: 40px;
+
 }
 
 .btn-floating.yellow.text.name {
