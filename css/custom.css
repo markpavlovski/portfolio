@@ -154,11 +154,10 @@ main {
 }
 
 .main-grid-item:hover {
-  /* background-color: rgba(230, 113, 107, .8); */
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.2), 0 6px 30px 5px rgba(0, 0, 0, 0.2), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255,235,59,1) !important;
   transition: box-shadow 0.5s ease;
   cursor: pointer;
-
 }
 
 .main-item1 {
