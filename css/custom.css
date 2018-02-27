@@ -50,7 +50,6 @@ main {
   width: 200px;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.0);
-  background-image: url('images/octocat.png');
   border-radius: 0;
   z-index: 10;
 
@@ -237,11 +236,12 @@ main {
   font-family: 'Unica One', cursive;
 }
 
-.content-grid-item:not(.content-item-x):hover {
+.content-grid-item:not(.content-item-x):not(.content-item-y):hover {
   /* background-color: rgba(230, 113, 107, .8); */
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.5s ease;
   cursor: pointer;
+  background-color: rgba(255,235,59, 1.0);
 
 }
 
@@ -271,8 +271,9 @@ main {
 }
 
 
-.content-item-z {
-  grid-area: z;
+
+.content-item-y:hover {
+  grid-area: y;
 }
 
 .content-item1 {
