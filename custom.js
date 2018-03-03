@@ -32,20 +32,24 @@ endShape(CLOSE);
 
 
 //
-
-
+let z
 document.addEventListener("scroll",()=>{
 
   const main = document.querySelector("main")
   const topLeft = document.querySelector("#top-left")
-  const allI = document.querySelector("i")
+  let icons = document.querySelectorAll("#top-right i")
 
   if (window.pageYOffset > main.offsetTop*.81){
     topLeft.classList.add("dark-font")
-    allI.classList.add("dark-font")
+    for(let i=0; i < icons.length; i++){
+      icons[i].classList.add("dark-font")
+    }
+
   } else {
     topLeft.classList.remove("dark-font")
-    allI.classList.remove("dark-font")
+    for(let i=0; i < icons.length; i++){
+      icons[i].classList.remove("dark-font")
+    }
   }
-  
+
 })
