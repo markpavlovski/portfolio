@@ -7,6 +7,10 @@
   transition: all .5s linear;
 }
 
+*::selection{
+  background: #bacaba;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -66,18 +70,37 @@ img {
 
 header {
   height: 100vh;
-  background-color: rgba(51,51,51,1);
+  background-color: rgba(255,255,255,1);
 }
 
 main {
-  margin-top: -10px;
-  height: 100vh;
+  /* margin-top: -10px; */
+  height: 200vh;
   background-color: rgba(255,255,255,1);
 }
+
+.sticky {
+  width: 100%;
+  position: sticky;
+  top: 30px;
+  margin-top: -100px;
+}
+
+#title {
+  font-family: 'Nanum Brush Script', cursive;
+  color: rgba(51,51,51,1);
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}
+
 
 .dark-font {
   color: rgba(51,51,51,1) !important;
 }
+
+
+
 
 
 /*

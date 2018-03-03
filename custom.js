@@ -1,6 +1,9 @@
 // DRAW ON CANVAS
 
 let yoff = 0.0
+let height = innerHeight
+let width = innerWidth
+
 function setup() {
   const cnv = createCanvas(window.innerWidth, window.innerHeight)
   cnv.parent(document.querySelector('header'))
@@ -31,9 +34,15 @@ endShape(CLOSE);
 
 }
 
+// RESIZE CANVAS ON WINDOW RESIZE
+
+window.addEventListener("resize",()=>{
+  canvas = document.querySelector("header > canvas")
+  canvas.style = `width: ${innerWidth}px; height: ${innerHeight}px;`
+})
 
 //
-let z
+
 document.addEventListener("scroll",()=>{
 
   const main = document.querySelector("main")
