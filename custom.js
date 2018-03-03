@@ -7,9 +7,9 @@ function setup() {
 }
 
 function draw() {
-background(51);
+background(79,139,204,);
 stroke('rgba(50%,100%,70%,0.0)');
-strokeWeight(10)
+strokeWeight(1)
 fill(255);
 // We are going to draw a polygon out of the wave points
 beginShape();
