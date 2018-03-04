@@ -22,7 +22,7 @@ var xoff = 0;
 
 // Iterate over horizontal pixels
 for (var x = 0; x <= width; x += 1) {
-  var y = map(noise(xoff, yoff), 0.5, 1, window.innerHeight*.85,window.innerHeight*.95);
+  var y = map(noise(xoff, yoff), 0.5, 1, window.innerHeight*.80,window.innerHeight*.90);
   vertex(x, y);
   xoff += 0.001;
 }
@@ -37,11 +37,19 @@ endShape(CLOSE);
 // RESIZE CANVAS ON WINDOW RESIZE
 
 window.addEventListener("resize",()=>{
-  canvas = document.querySelector("header > canvas")
+  const canvas = document.querySelector("header > canvas")
   canvas.style = `width: ${innerWidth}px; height: ${innerHeight}px;`
 })
 
 //
+
+document.querySelector("#title").addEventListener("click",()=>{
+  console.log("nice")
+  document.querySelector('#title')
+          .scrollIntoView({behavior: "smooth", block: "start"});
+})
+
+// Change navbar color
 
 document.addEventListener("scroll",()=>{
 
