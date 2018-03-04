@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Brush+Script');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+
 
 * {
   margin: 0px;
@@ -87,11 +89,14 @@ main {
 }
 
 #title {
-  font-family: 'Nanum Brush Script', cursive;
+  font-family: 'Cabin', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
   color: rgba(51,51,51,1);
+  /* color: #bacaba; */
   display: block;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 
