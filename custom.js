@@ -80,18 +80,24 @@ const shadeY = 15
 const shadeX = 2
 
 
-const calculator = document.querySelector(".card")
-
+const calculator = document.querySelectorAll(".card")
+let z
 document.addEventListener("mousemove",(event)=>{
+  console.log(event.target.getBoundingClientRect().x, event.target.getBoundingClientRect().y)
+  const target = event.target.getBoundingClientRect()
   center = {
-    x: window.innerWidth/2,
-    y: window.innerHeight/2
+    x: target.x + target.width/2,
+    y: target.y+ target.height/2
   }
   delta = {
     x: (event.x - center.x)/(window.innerWidth - center.x),
     y: (event.y - center.y)/(window.innerHeight - center.y)
   }
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  calculator.style.boxShadow = `${-delta.x * shadeX + 0}px ${-delta.y * shadeY + 0}px ${20}px ${0}px rgba(0, 0, 0, 0.2)`
-  calculator.style.transform = `perspective( 600px ) rotateY( ${delta.x * tiltX}deg ) rotateX( ${-delta.y * tiltY}deg )`
+  for (let i=0; i< calculator.length; i++){
+    calculator[i].style.boxShadow = `${-delta.x * shadeX + 0}px ${-delta.y * shadeY + 0}px ${20}px ${0}px rgba(0, 0, 0, 0.2)`
+    calculator[i].style.transform = `perspective( 600px ) rotateY( ${delta.x * tiltX}deg ) rotateX( ${-delta.y * tiltY}deg )`
+  }
+  // calculator.style.boxShadow = `${-delta.x * shadeX + 0}px ${-delta.y * shadeY + 0}px ${20}px ${0}px rgba(0, 0, 0, 0.2)`
+  // calculator.style.transform = `perspective( 600px ) rotateY( ${delta.x * tiltX}deg ) rotateX( ${-delta.y * tiltY}deg )`
 })
