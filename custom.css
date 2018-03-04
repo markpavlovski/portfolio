@@ -117,8 +117,13 @@ container {
   margin: 20px;
   width: 750px;
   height: 120px;
-  background-color: #ffffff;
-  transition: all 0s linear;
+  /* background-color: #bada55; */
+  /* transition: all 0s linear; */
+  transition: background-color 1.5s ease;
+}
+
+.card:hover {
+  background-color: #bacaba;
 }
 
 

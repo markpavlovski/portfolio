@@ -74,8 +74,12 @@ document.addEventListener("scroll",()=>{
 
 // TILTING
 
-const tilt = 5
-const shade = 15
+const tiltY = 10
+const tiltX = 1
+const shadeY = 15
+const shadeX = 2
+
+
 const calculator = document.querySelector(".card")
 
 document.addEventListener("mousemove",(event)=>{
@@ -87,7 +91,7 @@ document.addEventListener("mousemove",(event)=>{
     x: (event.x - center.x)/(window.innerWidth - center.x),
     y: (event.y - center.y)/(window.innerHeight - center.y)
   }
-  calculator.style.transform = `perspective( 600px ) rotateY( ${delta.x * tilt}deg ) rotateX( ${-delta.y * tilt}deg )`;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  calculator.style.boxShadow = `${-delta.x * shade + 0}px ${-delta.y * shade + 0}px ${40}px ${0}px rgba(0, 0, 0, 0.2)`
+  calculator.style.boxShadow = `${-delta.x * shadeX + 0}px ${-delta.y * shadeY + 0}px ${20}px ${0}px rgba(0, 0, 0, 0.2)`
+  calculator.style.transform = `perspective( 600px ) rotateY( ${delta.x * tiltX}deg ) rotateX( ${-delta.y * tiltY}deg )`
 })
