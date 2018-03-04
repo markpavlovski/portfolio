@@ -118,7 +118,7 @@ container {
   width: 750px;
   height: 120px;
   /* background-color: #bada55; */
-  /* transition: all 0s linear; */
+  transition: all .5s linear;
   transition: background-color 1.5s ease;
 }
 
