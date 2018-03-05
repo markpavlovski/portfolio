@@ -113,19 +113,16 @@ const tagDataJSON = localStorage.getItem("tagData")
 const tagData = tagDataJSON ? JSON.parse(tagDataJSON) : {}
 const tags = document.querySelectorAll(".tag:not(.title-tag)")
 for (let i = 0; i < tags.length; i++) {
-  // if (favorites[stars[i].closest(".card").id]) {
-  //   stars[i].classList.toggle("fas")
-  //   stars[i].classList.toggle("i-fav")
-  // }
-  console.log(i)
+  if (tagData[tags[i].firstElementChild.innerText]) {
+    tags[i].classList.toggle("selected")
+  }
 }
 document.querySelector("#tags").addEventListener("click", (event) => {
-  if (event.target.querySelector("span:not(.title-tag)") || event.target.tagName === "SPAN") {
-    const tag = event.target.querySelector("span") || event.target;
-    console.log(tag.innerText)
-    console.log(tag)
-    tagData[tag.innerText] = !tagData[tag.innerText]
-    tag.parentElement.classList.toggle("selected")
+  const tag = event.target.closest(".tag:not(.title-tag)")
+  if (tag) {
+    const tagName = tag.firstElementChild.innerText
+    tagData[tagName] = !tagData[tagName]
+    tag.classList.toggle("selected")
     localStorage.setItem("tagData", JSON.stringify(tagData))
   }
 })
