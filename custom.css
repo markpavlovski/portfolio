@@ -220,12 +220,11 @@ container {
   margin: 10px;
   line-height: 30px;
   cursor: pointer;
-  transition: border .5s ease;
-  transition: margin .5s ease;
+  transition: all .5s ease;
 }
 
 .tag:hover:not(.title-tag) {
-  background-color: rgba(51,51,51,.3);
+  background-color: rgba(51,51,51,.2);
   cursor: pointer;
 }
 
@@ -237,7 +236,16 @@ container {
 .tag.selected {
   border: 2px solid rgba(51,51,51,.9) !important;
   font-weight: bold;
-  /* margin-left: 9px; */
+}
+
+.tag.inactive {
+  opacity: .2;
+  cursor: default;
+}
+
+.tag.inactive:hover {
+  background-color: rgba(255,255,255,1) !important;
+  cursor: default;
 }
 
 .tag span {

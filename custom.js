@@ -117,6 +117,15 @@ for (let i = 0; i < tags.length; i++) {
     tags[i].classList.toggle("selected")
   }
 }
+// Make other tags appear inactive if ALL is selected
+if (tagData["ALL"]){
+  const tagsNotAll = document.querySelectorAll(".tag:not(.title-tag):not(.all-tag)")
+  for (let i=0; i<tagsNotAll.length; i++){
+    tagsNotAll[i].classList.toggle("inactive")
+  }
+}
+
+
 document.querySelector("#tags").addEventListener("click", (event) => {
   const tag = event.target.closest(".tag:not(.title-tag)")
   if (tag) {
@@ -124,5 +133,12 @@ document.querySelector("#tags").addEventListener("click", (event) => {
     tagData[tagName] = !tagData[tagName]
     tag.classList.toggle("selected")
     localStorage.setItem("tagData", JSON.stringify(tagData))
+  }
+  // Make other tags appear inactive if ALL is selected
+  if (tag && tag.firstElementChild.innerText === "ALL"){
+    const tagsNotAll = document.querySelectorAll(".tag:not(.title-tag):not(.all-tag)")
+    for (let i=0; i<tagsNotAll.length; i++){
+      tagsNotAll[i].classList.toggle("inactive")
+    }
   }
 })
