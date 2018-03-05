@@ -104,6 +104,19 @@ main {
   cursor: pointer;
 }
 
+
+#footnote {
+  font-family: 'Cabin', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: rgba(51,51,51,1);
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  cursor: default;
+  margin-bottom: 20px;
+}
+
 .dark-font {
   color: rgba(51,51,51,1) !important;
 }
@@ -133,7 +146,7 @@ container {
 }
 
 .card:hover {
-  background-color: #bacaba;
+  background-color: rgba(237,106,90,.9);
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 }
 

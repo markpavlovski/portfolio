@@ -71,3 +71,13 @@ document.addEventListener("scroll",()=>{
   }
 
 })
+
+// Handle Favorites
+
+document.querySelector("container").addEventListener("click",(event)=>{
+  console.log("hi")
+  console.log(event.target)
+  if (event.target.classList.contains("star")){
+    console.log("star")
+  }
+})
