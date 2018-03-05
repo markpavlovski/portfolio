@@ -73,8 +73,15 @@ document.addEventListener("scroll",()=>{
 })
 
 // Handle Favorites
-
-const favorites = {}
+const favoritesJSON = localStorage.getItem("favorites")
+const favorites = favoritesJSON ? JSON.parse(favoritesJSON) : {}
+const stars = document.querySelectorAll(".card i.fa-star")
+for (let i=0; i<stars.length;i++){
+  if (favorites[stars[i].closest(".card").id]){
+    stars[i].classList.toggle("fas")
+    stars[i].classList.toggle("i-fav")
+  }
+}
 
 document.querySelector("container").addEventListener("click",(event)=>{
   if (event.target.classList.contains("fa-star")){
@@ -83,5 +90,6 @@ document.querySelector("container").addEventListener("click",(event)=>{
     event.target.classList.toggle("fas")
     event.target.classList.toggle("i-fav")
     console.log(favorites[id])
+    localStorage.setItem("favorites",JSON.stringify(favorites))
   }
 })

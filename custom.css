@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Brush+Script');
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Marko+One');
 
 
 * {
@@ -64,10 +63,9 @@ nav i {
 }
 
 nav i:hover{
-  /* margin-left: 5px;
-  margin-right: 20px; */
   font-size: 17px;
   margin-top: -2px;
+  color: rgba(226,192,68,1);
 }
 
 img {
@@ -96,7 +94,6 @@ main {
 
 #title {
   font-family: 'Cabin', sans-serif;
-  /* font-family: 'Marko One', serif; */
   letter-spacing: 2px;
   font-weight: 500;
   color: rgba(51,51,51,1);
