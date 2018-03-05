@@ -197,6 +197,9 @@ container {
   color: rgba(255,255,255,1) !important;
 }
 
+.invisible {
+  opacity: 0 !important;
+}
 /*
 .z-depth-0 {
   -webkit-box-shadow: none !important;
