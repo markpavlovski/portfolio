@@ -74,10 +74,14 @@ document.addEventListener("scroll",()=>{
 
 // Handle Favorites
 
+const favorites = {}
+
 document.querySelector("container").addEventListener("click",(event)=>{
-  console.log("hi")
-  console.log(event.target)
-  if (event.target.classList.contains("star")){
-    console.log("star")
+  if (event.target.classList.contains("fa-star")){
+    const id = event.target.closest(".card").id;
+    favorites[id] = !favorites[id]
+    event.target.classList.toggle("fas")
+    event.target.classList.toggle("i-fav")
+    console.log(favorites[id])
   }
 })
