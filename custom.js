@@ -84,9 +84,6 @@ document.addEventListener("scroll", () => {
     }
   }
 
-
-
-
 })
 
 // Handle Favorites
@@ -99,7 +96,6 @@ for (let i = 0; i < stars.length; i++) {
     stars[i].classList.toggle("i-fav")
   }
 }
-
 document.querySelector("container").addEventListener("click", (event) => {
   if (event.target.classList.contains("fa-star")) {
     const id = event.target.closest(".card").id;
@@ -107,5 +103,29 @@ document.querySelector("container").addEventListener("click", (event) => {
     event.target.classList.toggle("fas")
     event.target.classList.toggle("i-fav")
     localStorage.setItem("favorites", JSON.stringify(favorites))
+  }
+})
+
+
+
+// Handle Tags
+const tagDataJSON = localStorage.getItem("tagData")
+const tagData = tagDataJSON ? JSON.parse(tagDataJSON) : {}
+const tags = document.querySelectorAll(".tag:not(.title-tag)")
+for (let i = 0; i < tags.length; i++) {
+  // if (favorites[stars[i].closest(".card").id]) {
+  //   stars[i].classList.toggle("fas")
+  //   stars[i].classList.toggle("i-fav")
+  // }
+  console.log(i)
+}
+document.querySelector("#tags").addEventListener("click", (event) => {
+  if (event.target.querySelector("span:not(.title-tag)") || event.target.tagName === "SPAN") {
+    const tag = event.target.querySelector("span") || event.target;
+    console.log(tag.innerText)
+    console.log(tag)
+    tagData[tag.innerText] = !tagData[tag.innerText]
+    tag.parentElement.classList.toggle("selected")
+    localStorage.setItem("tagData", JSON.stringify(tagData))
   }
 })
