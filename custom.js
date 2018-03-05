@@ -22,7 +22,7 @@ function draw() {
 
   // Iterate over horizontal pixels
   for (var x = 0; x <= width; x += 1) {
-    var y = map(noise(xoff, yoff), 0.5, 1, window.innerHeight * .85, window.innerHeight * .90);
+    var y = map(noise(xoff, yoff), 0.5, 1, window.innerHeight * .80, window.innerHeight * .90);
     vertex(x, y);
     xoff += 0.001;
   }
@@ -62,7 +62,7 @@ document.addEventListener("scroll", () => {
   const titleBox = document.querySelector(".sticky").getBoundingClientRect()
 
   // toggle header color
-  if (window.pageYOffset > main.offsetTop * .81) {
+  if (window.pageYOffset > main.offsetTop * .70) {
     topLeft.classList.add("dark-font")
     for (let i = 0; i < icons.length; i++) {
       icons[i].classList.add("dark-font")
