@@ -59,7 +59,7 @@ document.addEventListener("scroll", () => {
   const topLeft = document.querySelector("#top-left")
   const icons = document.querySelectorAll("#top-right i")
   const cards = document.querySelectorAll(".card")
-  const titleBox = document.querySelector("#title").getBoundingClientRect()
+  const titleBox = document.querySelector(".sticky").getBoundingClientRect()
 
   // toggle header color
   if (window.pageYOffset > main.offsetTop * .81) {
@@ -74,6 +74,7 @@ document.addEventListener("scroll", () => {
     }
   }
 
+  // Toggle dissapearing cards
   for (let i = 0; i < cards.length; i++) {
     if (titleBox.y + titleBox.height > cards[i].getBoundingClientRect().y) {
       cards[i].classList.add("invisible")
