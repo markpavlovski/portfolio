@@ -59,7 +59,7 @@ document.addEventListener("scroll", () => {
   const topLeft = document.querySelector("#top-left")
   const icons = document.querySelectorAll("#top-right i")
   const cards = document.querySelectorAll(".card")
-  const titleBox = document.querySelector(".sticky").getBoundingClientRect()
+  const titleBox = document.querySelector("#tags").getBoundingClientRect()
 
   // toggle header color
   if (window.pageYOffset > main.offsetTop * .70) {
