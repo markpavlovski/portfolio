@@ -7,6 +7,7 @@ let width = innerWidth
 function setup() {
   const cnv = createCanvas(window.innerWidth, window.innerHeight)
   cnv.parent(document.querySelector('header'))
+  // console.log(window.innerHeight)
 }
 
 function draw() {
@@ -28,10 +29,10 @@ function draw() {
   }
   // increment y dimension for noise
   yoff += 0.002;
-  vertex(width, height);
-  vertex(0, height);
+  vertex(width, height+100);
+  vertex(0, height+100);
   endShape(CLOSE);
-
+  console.log(window.innerHeight)
 }
 
 // RESIZE CANVAS ON WINDOW RESIZE
