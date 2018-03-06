@@ -140,31 +140,33 @@ function deactivateALLTag(){
 }
 
 function filterCards(){
+
   const cards = document.querySelectorAll(".card")
+
   for (let i =0; i< cards.length; i++){
-    // console.log(cards[i])
     const activeTags = Object.keys(tagData).filter((key)=>tagData[key])
-    const cardTags = []
-    // console.log(activeTags)
+    const cardTags = ["ALL"]
+    if (cards[i].querySelector(".fa-star").classList.contains("fas")) cardTags.push("STARRED")
+
     const cardTagsList = cards[i].querySelectorAll("ul.tags li")
     for (let j=0; j< cardTagsList.length; j++){
-      // console.log(cardTagsList[j].innerText)
       cardTags.push(cardTagsList[j].innerText)
     }
-    // console.log(cardTags)
-    // console.log(activeTags)
+
     const result = cardTags.filter((item)=>activeTags.includes(item))
-    console.log(result.join(''))
+
     if (! result.join('')){
       cards[i].classList.add("card-hide")
     } else {
       cards[i].classList.remove("card-hide")
     }
   }
+
   document.querySelector(".card:not(.card-hide)").scrollIntoView({
       behavior: "smooth",
       block: "center"
-  });
+  })
+
 }
 
 // if (tagData["ALL"]) deactivateTags()
