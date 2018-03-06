@@ -179,6 +179,7 @@ document.querySelector("#tags").addEventListener("click", (event) => {
       activateTags()
       deactivateALLTag()
       tag.classList.toggle("selected")
+      tagData["ALL"] = false
     }
     if (tagName === "ALL") {
       toggleTags()
