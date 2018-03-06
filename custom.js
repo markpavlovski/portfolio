@@ -144,13 +144,22 @@ function filterCards(){
   for (let i =0; i< cards.length; i++){
     // console.log(cards[i])
     const activeTags = Object.keys(tagData).filter((key)=>tagData[key])
+    const cardTags = []
     // console.log(activeTags)
-    const cardTags = cards[i].querySelector("ul")
-    console.log(cards[i].querySelector("ul li"))
-    for (let j=0; j<cards[i].querySelector("ul li").length; j++){
-      console.log(cards[i].querySelector("ul li")[j].innerText)
+    const cardTagsList = cards[i].querySelectorAll("ul.tags li")
+    for (let j=0; j< cardTagsList.length; j++){
+      // console.log(cardTagsList[j].innerText)
+      cardTags.push(cardTagsList[j].innerText)
     }
-    cards[i].classList.toggle("card-hidden")
+    // console.log(cardTags)
+    // console.log(activeTags)
+    const result = cardTags.filter((item)=>activeTags.includes(item))
+    console.log(result.join(''))
+    if (! result.join('')){
+      cards[i].classList.add("card-hide")
+    } else {
+      cards[i].classList.remove("card-hide")
+    }
   }
 }
 
