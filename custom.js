@@ -110,7 +110,7 @@ document.querySelector("container").addEventListener("click", (event) => {
 
 // Handle Tags
 const tagDataJSON = localStorage.getItem("tagData")
-const tagData = tagDataJSON ? JSON.parse(tagDataJSON) : {}
+const tagData = {}
 const tags = document.querySelectorAll(".tag:not(.title-tag)")
 for (let i = 0; i < tags.length; i++) {
   if (tagData[tags[i].firstElementChild.innerText]) {
@@ -155,6 +155,5 @@ document.querySelector("#tags").addEventListener("click", (event) => {
     }
     tagData[tagName] = !tagData[tagName]
     tag.classList.toggle("selected")
-    localStorage.setItem("tagData", JSON.stringify(tagData))
   }
 })
