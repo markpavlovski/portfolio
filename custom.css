@@ -198,10 +198,10 @@ container {
 .card-hide {
   display: none;
 }
-
+/*
 .card-show {
   display: flex;
-}
+} */
 
 .invisible {
   opacity: 0 !important;

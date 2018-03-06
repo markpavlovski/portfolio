@@ -161,9 +161,9 @@ function filterCards(){
       cards[i].classList.remove("card-hide")
     }
   }
-  cards[0].scrollIntoView({
+  document.querySelector(".card:not(.card-hide)").scrollIntoView({
       behavior: "smooth",
-      block: "top"
+      block: "center"
   });
 }
 
