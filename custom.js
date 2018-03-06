@@ -110,13 +110,10 @@ document.querySelector("container").addEventListener("click", (event) => {
 
 // Handle Tags
 const tagDataJSON = localStorage.getItem("tagData")
-const tagData = {}
+const tagData = {"ALL":true}
 const tags = document.querySelectorAll(".tag:not(.title-tag)")
-for (let i = 0; i < tags.length; i++) {
-  if (tagData[tags[i].firstElementChild.innerText]) {
-    tags[i].classList.toggle("selected")
-  }
-}
+
+
 // Make other tags appear inactive if ALL is selected
 function activateTags(){
   const tagsNotAll = document.querySelectorAll(".tag:not(.title-tag):not(.all-tag)")
@@ -140,7 +137,7 @@ function deactivateALLTag(){
   document.querySelector(".tag.all-tag").classList.remove("selected")
 }
 
-if (tagData["ALL"]) deactivateTags()
+// if (tagData["ALL"]) deactivateTags()
 
 document.querySelector("#tags").addEventListener("click", (event) => {
   const tag = event.target.closest(".tag:not(.title-tag)")
@@ -149,11 +146,13 @@ document.querySelector("#tags").addEventListener("click", (event) => {
     if (tagName !== "ALL") {
       activateTags()
       deactivateALLTag()
+      tag.classList.toggle("selected")
     }
     if (tagName === "ALL") {
       toggleTags()
+      tag.classList.toggle("selected")
     }
     tagData[tagName] = !tagData[tagName]
-    tag.classList.toggle("selected")
+    // tag.classList.toggle("selected")
   }
 })
