@@ -220,7 +220,7 @@ container {
   margin: 10px;
   line-height: 30px;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all .2s ease;
 }
 
 .tag:hover:not(.title-tag) {
@@ -239,13 +239,11 @@ container {
 }
 
 .tag.inactive {
-  opacity: .2;
-  cursor: default;
+  opacity: .3;
 }
 
 .tag.inactive:hover {
-  background-color: rgba(255,255,255,1) !important;
-  cursor: default;
+  /* background-color: rgba(255,255,255,1) !important; */
 }
 
 .tag span {
