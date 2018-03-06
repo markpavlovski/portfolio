@@ -161,6 +161,10 @@ function filterCards(){
       cards[i].classList.remove("card-hide")
     }
   }
+  cards[0].scrollIntoView({
+      behavior: "smooth",
+      block: "top"
+  });
 }
 
 // if (tagData["ALL"]) deactivateTags()
