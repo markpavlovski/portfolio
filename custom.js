@@ -108,7 +108,9 @@ document.querySelector("container").addEventListener("click", (event) => {
 
 
 
-// Handle Tags
+////////////// Handle Tags
+
+
 const tagDataJSON = localStorage.getItem("tagData")
 const tagData = {"ALL":true}
 const tags = document.querySelectorAll(".tag:not(.title-tag)")
@@ -137,6 +139,21 @@ function deactivateALLTag(){
   document.querySelector(".tag.all-tag").classList.remove("selected")
 }
 
+function filterCards(){
+  const cards = document.querySelectorAll(".card")
+  for (let i =0; i< cards.length; i++){
+    // console.log(cards[i])
+    const activeTags = Object.keys(tagData).filter((key)=>tagData[key])
+    // console.log(activeTags)
+    const cardTags = cards[i].querySelector("ul")
+    console.log(cards[i].querySelector("ul li"))
+    for (let j=0; j<cards[i].querySelector("ul li").length; j++){
+      console.log(cards[i].querySelector("ul li")[j].innerText)
+    }
+    cards[i].classList.toggle("card-hidden")
+  }
+}
+
 // if (tagData["ALL"]) deactivateTags()
 
 document.querySelector("#tags").addEventListener("click", (event) => {
@@ -154,5 +171,6 @@ document.querySelector("#tags").addEventListener("click", (event) => {
     }
     tagData[tagName] = !tagData[tagName]
     // tag.classList.toggle("selected")
+    filterCards()
   }
 })
