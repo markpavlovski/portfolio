@@ -124,22 +124,37 @@ function activateTags(){
     tagsNotAll[i].classList.remove("inactive")
   }
 }
-function toggleALLTag(){
-  document.querySelector(".tag.all-tag").classList.toggle("selected")
+function deactivateTags(){
+  const tagsNotAll = document.querySelectorAll(".tag:not(.title-tag):not(.all-tag)")
+  for (let i=0; i<tagsNotAll.length; i++){
+    tagsNotAll[i].classList.add("inactive")
+  }
+}
+function toggleTags(){
+  const tagsNotAll = document.querySelectorAll(".tag:not(.title-tag):not(.all-tag)")
+  for (let i=0; i<tagsNotAll.length; i++){
+    tagsNotAll[i].classList.toggle("inactive")
+  }
+}
+function deactivateALLTag(){
+  document.querySelector(".tag.all-tag").classList.remove("selected")
 }
 
-if (tagData["ALL"]) activateTags()
+if (tagData["ALL"]) deactivateTags()
 
 document.querySelector("#tags").addEventListener("click", (event) => {
   const tag = event.target.closest(".tag:not(.title-tag)")
   if (tag) {
     const tagName = tag.firstElementChild.innerText
+    if (tagName !== "ALL") {
+      activateTags()
+      deactivateALLTag()
+    }
+    if (tagName === "ALL") {
+      toggleTags()
+    }
     tagData[tagName] = !tagData[tagName]
     tag.classList.toggle("selected")
     localStorage.setItem("tagData", JSON.stringify(tagData))
-  }
-  // Make other tags appear inactive if ALL is selected
-  if (tag && tag.firstElementChild.innerText === "ALL"){
-    activateTags()
   }
 })
