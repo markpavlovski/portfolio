@@ -32,7 +32,6 @@ function draw() {
   vertex(width, height+100);
   vertex(0, height+100);
   endShape(CLOSE);
-  console.log(window.innerHeight)
 }
 
 // RESIZE CANVAS ON WINDOW RESIZE
